@@ -1,0 +1,78 @@
+<html>
+	<head>
+	<title>Titan</title>
+	<script>
+		var names = [
+			"Bbolonaur",
+			"Boggnab-enog",
+			"Camanote",
+			"Eilagnat",
+			"Hol-morlog",
+			"Homilar",
+			"Iggotauale",
+			"Phothauagyi",
+			"Phuggo-cyug",
+			"Rtlogyil",
+			"Sthabo-clih",
+			"Thachot",
+			"Yurnatha",
+			"Zhagugneh",
+			"Zshoggoscy",
+			"Aaudaubo",
+			"Bhalonene",
+			"Botugthat",
+			"Cleguggnat",
+			"Cturtla",
+			"Haa'bogthoth",
+			"Ithl-shacho",
+			"Moth-kiggu",
+			"N'cakekegyar",
+			"Nag-char",
+			"Olloscyg",
+			"Phal-ninele",
+			"Rhotamibog",
+			"Uanotha-ggy",
+			"Zsha-cami",
+			"Botuarna",
+			"Dabbhot",
+			"Darlhulel",
+			"Gotham",
+			"Hoshaoith",
+			"Kigogyami",
+			"Naskekeic",
+			"Ntausishura",
+			"Nyigao",
+			"Oitatur",
+			"Rliamaul",
+			"Uac'gnys",
+			"Ugugtho",
+			"Yshaudatl",
+			"Zorlo",
+		]
+		
+		var begin = function () {
+			var name1 = names[Math.floor(Math.random()*names.length)]
+			var name2 = names[Math.floor(Math.random()*names.length)]
+			//pick random name, open new window
+			window.open(name1 + "-" + name2 + '/Coeus', 'Coeus', 'width=200, height=200, left=400, top=0'); return false;
+		}
+	</script>
+	<style>
+		body {
+			background-color: black;
+			color: white;
+		}
+	</style>
+
+
+	</head>
+	<body>
+		<h1> Welcome to Titan. </h1>
+		<p> There is one rule. </p>
+		<br>
+		<p> You must use your primary monitor.</p>
+		<br>
+		<p> Should you lose your way, return here.</p>
+		<button onclick = "begin()">Begin anew.</button>
+	</body>
+</html>

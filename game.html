@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+		<style>
+			a {
+				color:white;
+			}
+		</style>
+        <meta charset="UTF-8" />
+		<script src = "/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="https://cdn.firebase.com/js/client/2.0.6/firebase.js"></script>
+		<script src = "/bower_components/require/build/require.js"></script>
+		<script type="text/javascript"> <!-- stupid, stupid require workaround -->
+			window.requireNode = window.require;
+			window.require = undefined; 
+		</script>
+        <script src="/bower_components/phaser/build/phaser.min.js"></script>
+		<script>
+			worlds = [
+				"(wall)",
+				"(open space)",
+				"Coeus",
+				"Crius",
+				"Cronus",
+				"Iapetus",
+				"Mnemosyne",
+				"Oceanus",
+				"Theia",
+				"Themis",
+				"Asteria",
+				"Astraeus",
+				"Clymene",
+				"Epimetheus",
+				"Eurybia",
+				"Metis",
+				"Pallas",
+				"Prometheus",
+				"Styx",
+			]
+
+
+			worldName = window.location.pathname.split("/")[2]
+			playerName = window.location.pathname.split("/")[1]
+			console.log(worlds.indexOf(worldName))
+			console.log(playerName)
+			worldID = worlds.indexOf(worldName)
+
+			$(document).ready(function () {
+				document.title = worldName
+			})
+
+			clickNav = function (world) {
+				if (world == "Styx") {
+					window.open(world, world, 'width = 600, height = 200, left = ' + ((worlds.indexOf(world) % 6) * 200) + ', top = ' + (Math.floor(worlds.indexOf(world) / 6) * 200))
+				}
+				else {
+					window.open(world, world, 'width = 200, height = 200, left = ' + ((worlds.indexOf(world) % 6) * 200) + ', top = ' + (Math.floor(worlds.indexOf(world) / 6) * 200))
+				}
+				$("#" + world).hide()
+				return false;
+			}
+
+
+			$(function () {
+				for (var i = 2; i <= worlds.length; i++) {
+					addString = '<a class = "navLink", onclick = "clickNav' + "('" + worlds[i]
+					addString += "')"
+					addString += '", id = "' + worlds[i] + '", href = "#">Navigate to ' + worlds[i] + "</a>"
+					$("#navlinks").append(addString)
+					$("#" + worlds[i]).hide()
+				}
+			})
+		</script>
+		<script type="text/javascript" src = "/ken_game.js"></script>
+    </head>
+    <body style = "background-color:#000000">
+
+	<div id = "game"></div>
+	<div id = "navlinks">
+	</div>
+
+    </body>
+</html>
