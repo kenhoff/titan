@@ -10,7 +10,7 @@ Playable at [titan.kenhoff.net](http://titan.kenhoff.net/)
 
 Teardown and postmortem at [my personal site](http://kenhoff.net/games/titan)
 
-Voteable at [the compo page](somewhere on ludum dare)
+Voteable at [the compo page](http://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=20246)
 
 Titan is an experimental game using [Phaser](http://phaser.io/), [Firebase](https://www.firebase.com/), and a lot of window manipulation.
 
